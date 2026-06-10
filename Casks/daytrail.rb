@@ -9,6 +9,13 @@ cask "daytrail" do
 
   app "DayTrail.app"
 
+  # Strip Gatekeeper quarantine after every install/upgrade so the app opens
+  # without the "damaged and can't be opened" warning on unsigned builds.
+  postflight do
+    system_command "/usr/bin/xattr",
+      args: ["-dr", "com.apple.quarantine", "#{appdir}/DayTrail.app"]
+  end
+
   zap trash: [
     "~/Library/Application Support/ai.daytrail.desktop",
     "~/Library/Logs/ai.daytrail.desktop",
