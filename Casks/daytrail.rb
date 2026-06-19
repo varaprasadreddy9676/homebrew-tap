@@ -1,6 +1,6 @@
 cask "daytrail" do
-  version "0.1.25"
-  sha256 "96bd821f7e81207ec9cbdbff9705ac510c9f3241ffc73459282131d138dc9c80"
+  version "0.1.26"
+  sha256 "38cd3e6b34526172633e8103f52f701a00fb5fe801bb3218618cf6a471939610"
 
   url "https://github.com/varaprasadreddy9676/DayTrail/releases/download/v#{version}/DayTrail_#{version}_aarch64.dmg"
   name "DayTrail"
